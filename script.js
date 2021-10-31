@@ -1,8 +1,11 @@
-const INVITATION = 'Let\'s play with you in the game!';
-const MAKE_CHOISE = "Make your choise, rock paper or scissors?";
+const INVITATION = 'Let\'s play with you in the game!Make your choise rock,paper or scissors...';
+  
 // function return random computer's answer
-console.log(INVITATION);
-console.log(MAKE_CHOISE);
+function getUserAnswer() {
+    alert(INVITATION);
+    playerSelection();
+}
+
 let userAnswer;
 let computerAnswer = '';
 function computerPlay () {
@@ -23,7 +26,7 @@ function getRandomNumber (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-computerPlay();
+// computerPlay();
 
 
 
@@ -33,14 +36,17 @@ function playerSelection () {
     return userAnswer;
     
 }
-playerSelection();
+// playerSelection();
 
 function game() {
     if (userAnswer == 'Rock' && computerAnswer == 'Rock') {
-        console.log ("Gz you win!");
+        console.log ("Tie!");
     } else if (userAnswer == 'Rock' && computerAnswer == 'Paper') {
         console.log('You lose!');
-    }
-    
+    } else if (userAnswer == 'Rock' && computerAnswer == 'Scissoors')
+   
 }
+getUserAnswer();
+
+computerPlay();
 game();
