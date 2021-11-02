@@ -11,11 +11,11 @@ let computerAnswer = '';
 function computerPlay () {
     let computerChoise = getRandomNumber(1, 3);
     if (computerChoise == 1) {
-        computerAnswer += "Rock";
+        computerAnswer += "rock";
     } else if (computerChoise == 2) {
-        computerAnswer += "Paper";
+        computerAnswer += "paper";
     } else {
-        computerAnswer += "Scissors";
+        computerAnswer += "scissors";
     }
     console.log(computerAnswer);
     return computerAnswer;
@@ -31,21 +31,23 @@ function getRandomNumber (min, max) {
 
 
 function playerSelection () {
-    userAnswer = prompt ('Input your answer', '');
+    userAnswer = prompt ('Input your answer', '').toLowerCase();
     console.log(userAnswer);
     return userAnswer;
     
 }
 // playerSelection();
 
-function game() {
-    if (userAnswer == 'Rock' && computerAnswer == 'Rock') {
+function game(userAnswer) {
+    if (userAnswer == computerAnswer) {
         console.log ("Tie!");
-    } else if (userAnswer == 'Rock' && computerAnswer == 'Paper') {
+    } else if (userAnswer == 'rock' && computerAnswer == 'paper') {
         console.log('You lose!');
-    } else if (userAnswer == 'Rock' && computerAnswer == 'Scissoors')
-   
+    } else if (userAnswer == 'rock' && computerAnswer == 'scissoors'){
+        console.log('You win!')
+    }
 }
+   
 getUserAnswer();
 
 computerPlay();
