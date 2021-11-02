@@ -38,7 +38,7 @@ function playerSelection () {
 }
 // playerSelection();
 
-function game(userAnswer) {
+function game() {
     if (userAnswer == computerAnswer) {
         console.log ("Tie!");
     } else if (userAnswer == 'rock' && computerAnswer == 'paper') {
